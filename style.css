@@ -1,0 +1,178 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    height: 100%;
+    background-image: url(back.jpg);
+    /* opacity: ; */
+    filter: drop-shadow(100%);
+}
+.navbar{
+    position: sticky;
+    background-color: rgb(244, 252, 249);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 5%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.items{
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: auto auto auto auto;   
+}
+.item{
+    text-decoration: none;
+    color: rebeccapurple;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.icons{
+    display: grid;
+    gap: 1.5vw;
+    grid-template-columns: auto auto auto auto;
+    
+}
+.icon{
+    color: black;
+    
+}
+#menu-bar{
+    display: none;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-family: 'Anton', sans-serif;
+    color:black;
+    text-decoration: solid;
+
+}
+.logo span{
+    font-size: 1.5rem;
+    color: blue;
+}
+
+.side-bar{
+    z-index: 1001;
+    transform: translate(-100%);
+}
+/* main card style */
+div.polaroid {
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(15deg);
+    
+  }
+  div.container {
+    padding: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and ((min-width:804px )and (max-width:732px)){
+    div.polaroid {
+        width: 50%;}
+
+  }
+
+
+
+
+
+
+@media screen and (max-width:732px) {
+    .items{
+        display: none;
+    }
+    .icons{
+        display: none;
+    }
+    #menu-bar{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+
+
+    .side-bar{
+        height: 100%;
+        position: fixed;
+        left: 0;
+        width: 230px;
+        background-color: rgb(18, 79, 79);
+        z-index: 2000;
+        transform: translate(0%);
+        transition: transform 0.3s linear 0s;
+      z-index: 2000;
+
+    }
+    .show_sidebar{
+        transform: translate(-100%) !important;
+    }
+    .menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu li{
+        color: aliceblue;
+        /* border-bottom: 1px solid rgba(239, 199, 199, 0.1); */
+    }
+    .menu li a{
+        color: aliceblue;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 20px;
+        
+    }
+     .side-icons{
+        list-style: none;
+        padding: 5px 15px;
+        background: rgb(250, 140, 140);
+        display:flex;
+        justify-content: space-between;
+    }
+    .side-icons li{
+        
+        width: 35px;
+        height: 35px;           
+    }
+    div.polaroid {
+        width: 60%;}
+}
