@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://images.freecreatives.com/wp-content/uploads/2016/04/Light-Orange-Plain-Background-.jpg"); 
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+ 
+*{
+    box-sizing: border-box;
+}  
+    .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    p{
+        margin: 0px;
+    }
+    header{
+        background-color: rgb(61, 61, 231);
+        text-align: center;
+        border-radius: 10px;
+        margin: 0px;
+        padding: 60px;
+    }
+    #heading{
+        font-size: 60px;
+        font-weight: bold;
+        color: rgb(255, 0, 179);
+    }
+    #subheading{
+        font-size: 30px;
+        font-weight: lighter;
+        color: rgb(209, 118, 182);
+    }
+    .gola{
+        
+        width: 200px;
+        height: 100px;
+        background-color: rgb(92, 235, 127);
+        transition: width 2s, height 2s, border-radius 4s, background 4s;
+        position: sticky;
+        animation: bouncing 0.5s ease 0s infinite alternate-reverse both;
+       
+        display: inline-block;
+       
+        position: relative;
+      
+        margin-top: 100px;
+        text-align: center;
+
+
+    }
+    h1{
+        color: rgb(92, 235, 127);
+    }
+    .gola:hover{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgb(212, 21, 21);
+        align-items: center;
+        text-align: center;
+    }
+    #gola1:hover{
+       
+        background-color: rgb(151, 135, 135);
+    }
+    #gola2:hover{
+       
+       background-color: rgb(205, 66, 233);
+   }
+   #gola3:hover{
+       
+       background-color: rgb(180, 43, 43);
+   }
+   footer{
+    align-content: center;
+   }
+   button{
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: rgb(205, 66, 233);
+    color: rgb(61, 61, 231);
+   }
+   button:hover{
+    color: rgb(205, 66, 233);
+    background-color: rgb(61, 61, 231);;
+   }
+        
+@keyframes bouncing{
+        0%{
+            bottom: 0;
+            left: 0px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            
+        }
+        100%{
+            bottom: 50px;
+            left: 60px;
+            box-shadow: 0 50px 50px rgba(0,0,0,0.1) ;
+        }
+    }
+</style>
+<body>
+    <header>
+    <p id="heading">LET'S PLAY</p>
+    <p id="subheading"></p>
+       <p id="subheading">Lets hover on box and play</p>
+</header>
+    <div class="main">
+        <div class="gola" id="gola1" ><h1>LOVE</h1>
+    </div>
+    <div class="gola" id="gola2" ><h1>LIKE</h1>
+    </div>
+    <div class="gola" id="gola3" ><h1>HATE</h1>
+    </div>
+    </div>
+    <footer>
+        <center><button onClick="Ran();">Shuffle</button></center>
+    </footer>
+    <script>
+           function Ran(){
+    var div = document.querySelector('.main');
+for (var i = 3; i >= 0; i--) {
+    div.appendChild(div.children[Math.random() * i | 0]);
+}
+}
+    </script>
+    
+</body>
+</html>

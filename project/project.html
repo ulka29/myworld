@@ -1,29 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
+    
 </head>
 <style>
-    body{
-        background-color: rgb(118, 184, 242);
-    }
-    .container li{
-        list-style: none;
-    }
-    .container a{
-        text-decoration: none;
-        text-transform: uppercase;
-        color: rgb(232, 46, 92);
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 0.75rem;
+}
+a{
+  text-decoration: none;
+}
+.box {
+  position: relative;
+  width: auto;
+  height: 75px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(59, 38, 38, 0.25);
+}
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover::before {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.box .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.box .content .icon {
+  position: relative;
+  min-width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover .content .icon {
+  color: #fff;
+}
+
+.box .content .text h3 {
+  font-weight: 500;
+  color: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box .content .text p {
+  font-size: 0.9em;
+  color: #999;
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover .content .text h3,
+.box:hover .content .text p {
+  color: #fff;
+}
 </style>
-<body>
-    <div class="container">
-        <ul>
-        <li><a href="https://ulka29.github.io/index/project/eclips.html">eclips</a></li>
-    </ul>
+
+  <div class="container">
+    <a href="volumeBotton.html">
+    <div class="box" style="--color: #fc5f9b">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Volume botton</h3>
+          <p>change volume in unique way</p>
+        </div>
+      </div>
     </div>
+  </a>
+  <a href="https://ulka29.github.io/myspotify/">
+    <div class="box" style="--color: #a362ea">
+      <div class="content">
+        <div class="icon">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Spotify Clone</h3>
+          <p>It is a music player app</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="https://ulka29.github.io/tic-tac-toe/">
+    <div class="box" style="--color: #0ed095">
+      <div class="content">
+        <div class="icon">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Tic-Tac-Toe</h3>
+          <p>This is a fun game to play with two people </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="form.html">
+    <div class="box" style="--color: #5bc0de">
+    <div class="content">
+      <div class="icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="text">
+        <h3>Form</h3>
+        <p>A simple form that children will Love</p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="cardflip.html">
+  <div class="box" style="--color: #f0ad4e">
+    <div class="content">
+      <div class="icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="text">
+        <h3>Card filp</h3>
+        <p>Just a simple card flip</p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="nevigation.html">
+  <div class="box" style="--color: #0ed095">
+    <div class="content">
+      <div class="icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="text">
+        <h3>Nevigation Bar</h3>
+        <p>Toggle side nevigation bar</p>
+      </div>
+    </div>
+  </div>
+</a>
+  <a href="color play.html">
+    <div class="box" style="--color: #5E0404">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Color Play1</h3>
+          <p>This is a color play Game</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="form1.html">
+    <div class="box" style="--color: #045F5F">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Form</h3>
+          <p>A classy form with HTML and CSS</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="Responsive Table.html">
+    <div class="box" style="--color: #FF6700">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Responsive Table</h3>
+          <p>This is a responsive table</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="card.html">
+    <div class="box" style="--color: #FD1C03">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Card</h3>
+          <p>This is a Simple Card</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="color play1.html">
+    <div class="box" style="--color: #7E354D">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Color Play</h3>
+          <p>This is a rendom Color generator</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="game.html">
+    <div class="box" style="--color: #E30B5D">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Game</h3>
+          <p>hover and see a secret message</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="game1.html">
+    <div class="box" style="--color: #E30B5D">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Game1</h3>
+          <p>Just play and understand</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+  <a href="gradientBackground.html">
+    <div class="box" style="--color: #E30B5D">
+      <div class="content">
+        <div class="icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="text">
+          <h3>Gradient Background</h3>
+          <p>this is a gradient background generator</p>
+        </div>
+      </div>
+    </div>
+  
+  </a>
+</a>
+<a href="heart.html">
+  <div class="box" style="--color: #E30B5D">
+    <div class="content">
+      <div class="icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="text">
+        <h3>Heart</h3>
+        <p>A heart made with CSS</p>
+      </div>
+    </div>
+  </div>
+
+</a>
+<a href="naming.html">
+  <div class="box" style="--color: #E30B5D">
+    <div class="content">
+      <div class="icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="text">
+        <h3>namer</h3>
+        <p>enters name to message</p>
+      </div>
+    </div>
+  </div>
+
+</a>
+</div>
+
+
 </body>
 </html>

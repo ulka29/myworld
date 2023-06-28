@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        position: relative;
+        height: 288px;
+        width: 180px;
+        background-color: red;
+        border-radius: 200px 200px 0 0;
+        transform: rotate(45deg);
+        margin-left: 100px;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        left: 304px;
+        top: 0px;
+    }
+    .container::before{
+        content: "";
+        position: absolute;
+        height: 240px;
+        width: 180px;
+        background-color: red;
+        border-radius: 200px 200px 0 0;
+        transform: rotate(-90deg);
+        left: -81px;
+        top: 79px;
+    }
+    .container p{
+        font-size: 15px;
+    }
+</style>
+<body>
+    <div class="container">
+        <p>I love you</p>
+
+    </div>
+</body>
+</html>

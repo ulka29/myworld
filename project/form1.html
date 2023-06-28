@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://i.ytimg.com/vi/nxnx44MyxXA/maxresdefault.jpg"); 
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+ 
+*{
+    box-sizing: border-box;
+}  
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 30px;
+    font-size: 15px;
+    padding: 8px;
+} 
+fieldset{
+    border: 0px sienna ;
+    width: 36%;
+    
+    background-color: rgb(150, 132, 144);
+    border-color:rgb(245, 167, 241);
+   border-radius:10px;
+  margin:-100px 0 0 -150px; 
+   position:absolute;
+   left:45%;
+   top:25%;
+}
+input[type=text],
+input[type=email],
+input[type=password],
+
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px;
+    border-radius: 5px;
+    margin: 10px;
+} 
+#containerhead{
+    background-color: rgba(166, 192, 226, 0.705);
+    border-radius: 5px;
+}
+#containerbody{
+    padding: 15px;
+    margin: 15px;
+}
+input[type=submit]{
+    background-color: rgb(87, 108, 230);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover{
+    background-color: rgb(174, 144, 212);
+}
+    </style>
+</head>
+    <body class="bg">
+        
+            <fieldset claas="no">
+                <div id="containerhead">
+                    <br>
+
+        <h1><center> CONTACT INFORMATION </center></h1>
+        <p><center> please fill all the information </center></p>
+        <br>
+   </div>
+   <div id="containerbody">
+        <p> 
+           Your Name: <input type="text" name="name" required placeholder="Your Full Name"> 
+        </p>
+        <p>
+            Your E-mail: <input type="email" name="email" placeholder="Valid E-mail Address">
+        </p>
+        <p>
+            Message <textarea cols="50" rows="10" placeholder="Your Message To Us"></textarea>
+        </p>
+        <p>
+            Subject: <input type="text" name="sub" required placeholder="Job Inquiry"> 
+         </p>
+         <p>
+            <input type="submit" value="PAY NOW">
+        </p>
+        </div>
+    </fieldset>
+
+
+    
+</body>
+</html>

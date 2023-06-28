@@ -9,3 +9,22 @@ navtoggle.addEventListener("click",function(){
     }
     sidebar.classList.toggle("show_sidebar");
 })
+
+// card flip
+var cards=document.querySelectorAll('.card');
+    
+    [...cards].forEach((card)=>{
+        card.addEventListener('click',function(){
+            for(i=0;i<4;i++){
+                if(card==cards[i]){
+                continue;
+            }
+        if(cards[i].classList=='card is-flipped'){
+            cards[i].classList.remove("is-flipped");
+        }
+    }
+            card.classList.toggle('is-flipped');           
+        })
+    })
+
+    //card flip end

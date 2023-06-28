@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+            text-align: center;
+            text-shadow: 4px;
+            box-sizing: border-box;
+        }
+        .box_head{
+            overflow: hidden;
+            background-color: rgb(176, 209, 28);
+            border: solid rgb(60, 97, 5);
+
+           
+        }
+        .head{
+            float: left;
+            background-color: rgb(219, 231, 163);
+
+        }
+        @media screen and ( max-width: 450px){
+        .head{
+        width: 100%;
+        height: 120px;
+        font-size: 40px;
+        border: 2px solid green;
+        padding: 20px;
+    }
+}
+        @media screen and ( min-width: 451px) and ( max-width:1000px){
+        .head{
+        width: 50%;
+        height: 120px;
+        font-size: 40px;
+        border: 2px solid green;
+        padding: 20px;
+    }
+}
+        @media screen and ( min-width: 1000px){
+        .head{
+        width: 25%;
+        height: 120px;
+        font-size: 40px;
+        border: 2px solid green;
+        padding: 20px;
+    }
+}
+</style>
+<body>
+    <div class=" box_head">
+        <h1 class="sub">Responsive view of web page</h1>
+        <div class="head">Google</div>
+        <div class="head">Facebook</div>
+        <div class="head">Instagram</div>
+        <div class="head">Twitter</div>
+        <br>
+        <div class="head">Whatsapp</div>
+        <div class="head">Youtube</div>
+        <div class="head">Telegram</div>
+        <div class="head">Indeed</div>
+        </div>
+        
+</body>
+</html>

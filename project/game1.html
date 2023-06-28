@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        background-size:cover ;
+
+        background: linear-gradient(0deg, rgba(34,151,195,1) 0%, rgba(237,45,253,1) 100%);
+
+        box-sizing: border-box;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    #no,#yes{
+        height: 60px;
+        width: 100px;
+    }
+</style>
+<body>
+    <div class="btn">
+        <h1 id="text">ARE YOU MENTAL</h1>
+    <button id="yes" onclick="clkfunction()">yes</button>
+    <button id="no">no</button>
+    
+</div>
+    <script>
+       function clkfunction(){
+        alert("I knew it");
+       }
+        no=document.getElementById("no");
+        no.addEventListener("mouseover",function(){
+            // document.getElementById("text").innerText="ulka";
+            move();
+        })
+        function move(){
+            let i = Math.floor(Math.random()*window.innerWidth+1);
+            let j = Math.floor(Math.random()*window.innerHeight+1);
+            if(i<100){
+                i=i+100;
+            }
+            if(window.innerWidth-i<100)
+            {
+                i=i-100;
+            }
+            if(window.innerHeight-i<60)
+            {
+                i=i-60;
+            }
+            if(j<60){
+                j=j+60;
+            }
+            no.style.position="absolute";
+            no.style.right=i+"px";
+            no.style.top=j+"px";
+        }
+        // document.getElementsByClassName("try").addEventListener("click",function(){
+        //     document.getElementById("text").innerText="ulka";
+        // });
+    </script>
+</body>
+</html>
+
+
+<!-- event listner only works on id not on classes -->
