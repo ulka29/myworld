@@ -8,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
     
+    
 }
 .main-container{
     height: 100%;
@@ -17,12 +18,13 @@
     filter: drop-shadow(100%);
 }
 .navbar{
-    position: sticky;
-    background-color: rgb(244, 252, 249);
+    position: fixed;
+    width: 100%;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5vw 5%;
+    padding: 1.5vw 2%;
     z-index: 1000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -32,13 +34,16 @@
     display: grid;
     gap: 3vw;
     grid-template-columns: auto auto auto auto;   
+    margin-left: auto;
+    margin-right: auto;
 }
 .item{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    color: rebeccapurple;
+    color: white;
     font-size: 1.2rem;
     text-transform: uppercase;
+    padding: 0 10px;
 }
 .item:hover{
     color: rgb(192, 31, 171);
@@ -47,10 +52,11 @@
     display: grid;
     gap: 1.5vw;
     grid-template-columns: auto auto auto auto;
+    margin-left: auto;
     
 }
 .icon{
-    color: black;  
+    color: white;  
 }
 .icon:hover{
     color: rgb(192, 31, 171);
@@ -63,8 +69,9 @@
 .logo{
     font-size: 1.5rem;
     font-family: 'Anton', sans-serif;
-    color:black;
+    color:white;
     text-decoration: solid;
+    margin-right: auto;
 
 }
 .logo span{
@@ -91,15 +98,27 @@ div.polaroid {
     
   }
 
+  div.polaroid_1 {
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: auto;
+    /* transform: rotate(15deg); */
+    background-color: rgb(148, 148, 157);
+    
+  }
+
   div.backGround{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 105px;
+    padding-bottom: 43px;
     display: flex;
 }
 
   div.container {
     width: 52%;
-    margin-top: 35px;
+    margin-top: 10px;
     margin-right: 7%;
     margin-left: auto;
     padding: 10px;
@@ -109,10 +128,7 @@ div.polaroid {
   }
 
   /* content start */
-  *{
-    margin: 0;
-    padding: 0;
-}
+ 
 .main_body{
     background: linear-gradient(to right,rgb(125, 147, 220), rgb(53, 24, 43));
 }
@@ -122,31 +138,36 @@ div.polaroid {
 .head{
     background-color: rgb(15, 15, 15);
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 0px;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 #heading{
     font-size: 40px;
     font-weight: bold;
-    color: blue;
+    color: white;
 }
 #subheading{
     font-size: 15px;
     font-weight: lighter;
-    color: rebeccapurple;
+    color: rgb(176, 180, 243);
 }
 .main{
     display: grid;
     
         grid-template-columns: 1fr 1fr 1fr 1fr;
        justify-items: center;
+       
+    padding: 15px;
+    margin-bottom: 15px;
+
 }
 .scene{
     
     width: 200px;
     height: 260px;
-    margin: 40px 0;
+    
     perspective: 600px;
 }
 .card{
@@ -183,13 +204,16 @@ div.polaroid {
     background: slateblue;
     transform: rotateY(180deg);
 }
-@media screen and (max-width: 820px) and (min-width: 457px) {
+@media screen and (max-width: 976px) and (min-width: 498px) {
     .main{
        
         grid-template-columns: 1fr 1fr;
     }
+    .scene{
+        margin: 10px 0;
+    }
 }
-@media screen and (max-width: 457px) {
+@media screen and (max-width: 498px) {
     .main{
        
         grid-template-columns: 1fr ;
@@ -205,8 +229,14 @@ div.polaroid {
     }
 }
 @media screen and (max-width: 492px) {
+    .poloroid1, .main{
+        display: none;
+    }
     .head{
         padding: 20px;
+    }
+    .scene{
+        margin: 10px 0;
     }
 }
 
@@ -265,11 +295,12 @@ div.polaroid {
         position: fixed;
         left: 0;
         width: 230px;
-        background-color: rgb(18, 79, 79);
-        z-index: 2000;
+        background: rgb(27, 26, 27);
+       margin-top: 44px;
+        
         transform: translate(0%);
         transition: transform 0.3s linear 0s;
-      z-index: 2000;
+      z-index: 0;
 
     }
     .show_sidebar{
@@ -292,10 +323,20 @@ div.polaroid {
         padding: 20px;
         
     }
+    .side-icon{
+        color: white; 
+    }
+    .side-icon:hover{
+        color: rgb(192, 31, 171);
+    }
+    .side-item:hover{
+        color: rgb(192, 31, 171);
+    }
      .side-icons{
         list-style: none;
         padding: 5px 15px;
-        background: rgb(250, 140, 140);
+        background: rgb(27, 26, 27);
+        
         display:flex;
         justify-content: space-between;
     }
@@ -307,8 +348,8 @@ div.polaroid {
    
 /* main card start */
         div.backGround{
-            padding-top: 50px;
-            padding-bottom: 50px;
+            /* padding-top: 50px;
+            padding-bottom: 50px; */
             display: block;
         }
         div.polaroid {

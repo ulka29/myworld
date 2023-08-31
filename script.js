@@ -1,4 +1,5 @@
 let navtoggle=document.querySelector("#menu-bar");
+let navtoggle1=document.querySelector("#backGround");
 let sidebar = document.querySelector(".side-bar");
 navtoggle.addEventListener("click",function(){
     if(navtoggle.firstElementChild.classList.contains("fa-bars")){
@@ -9,7 +10,14 @@ navtoggle.addEventListener("click",function(){
     }
     sidebar.classList.toggle("show_sidebar");
 })
-
+navtoggle1.addEventListener("click",function(){
+    if(navtoggle.firstElementChild.classList.contains("fa-times")){
+    console.log(navtoggle.firstElementChild.classList.replace("fa-times","fa-bars"));
+    sidebar.classList.toggle("show_sidebar");
+    }
+   
+   
+})
 // card flip
 var cards=document.querySelectorAll('.card');
     
