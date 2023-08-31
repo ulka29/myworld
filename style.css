@@ -243,6 +243,14 @@ div.polaroid {
     .poloroid1, .main{
         display: none;
     }
+    .description{
+        padding: 10px;
+
+    }
+    .description p{
+        font-size: 15px;
+        
+    }
     .head{
         padding: 20px;
     }
