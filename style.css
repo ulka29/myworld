@@ -10,6 +10,9 @@
     
     
 }
+.font{
+    font-family: 'Roboto', sans-serif;
+}
 .main-container{
     height: 100%;
     background: linear-gradient(to right,rgb(125, 147, 220), rgb(53, 24, 43));
@@ -101,13 +104,21 @@ div.polaroid {
   div.polaroid_1 {
     width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
+    /* text-align: center; */
     margin-top: 0;
     margin-left: 5%;
     margin-right: auto;
     /* transform: rotate(15deg); */
     background-color: rgb(148, 148, 157);
     
+  }
+
+  .description{
+    padding: 36px;
+    margin-bottom: 37px;
+  }
+  .description p{
+    font-size: 20px;
   }
 
   div.backGround{
